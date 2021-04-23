@@ -6,10 +6,12 @@ FIBBONACI_DYNAMIC_STORAGE_TYPE FibbonaciDynamic::create_fibbonaci_dynamic_storag
     if (capacity > 2)
     {
         fibbonaci_dynamic_storage.reserve(capacity);
+        fibbonaci_dynamic_storage.resize(capacity);
     }
     else
     {
         fibbonaci_dynamic_storage.reserve(2);
+        fibbonaci_dynamic_storage.resize(2);
     }
     fibbonaci_dynamic_storage[0] = 1;
     fibbonaci_dynamic_storage[1] = 1;

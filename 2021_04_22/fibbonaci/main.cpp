@@ -45,7 +45,7 @@ void benchmark_dynamic(std::vector<unsigned int>& fibnums)
         _fibbonaci_dynamic_storage = FibbonaciDynamic::create_fibbonaci_dynamic_storage(num);
         std::cout << "Fibbonaci (dynamic) for " << num << " ... ";
         timer_start = std::chrono::steady_clock::now();
-        const unsigned int result = FibbonaciDynamic::fibbonaci(num);
+        const unsigned int result = FibbonaciDynamic::fibbonaci(num, _fibbonaci_dynamic_storage);
         timer_end = std::chrono::steady_clock::now();
         diff = std::chrono::duration_cast<std::chrono::microseconds>(timer_end - timer_start).count();
         std::cout << result;
