@@ -49,14 +49,14 @@ void benchmark_dynamic(std::vector<unsigned int>& fibnums)
         timer_end = std::chrono::steady_clock::now();
         diff = std::chrono::duration_cast<std::chrono::microseconds>(timer_end - timer_start).count();
         std::cout << result;
-        std::cout << " - " << diff << "[µs]" << std::endl;
+        std::cout << " - " << diff << " µs" << std::endl;
     }
 }
 
 int main(int argc, char** argv) {
-    std::vector<unsigned int> nums {1, 2, 3, 5, 8, 24, 30};
-    benchmark_recursive(nums);
+    std::vector<unsigned int> nums {1, 2, 3, 5, 8, 24, 30, 50, 100};
     benchmark_iterative(nums);
     benchmark_dynamic(nums);
+    benchmark_recursive(nums);
     return 0;
 }
